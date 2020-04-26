@@ -6,20 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <header>Week 01</header>
+    <h2>Week 01</h2>
     <main>
-        <h2>Notes</h1>
+        <h3>Notes</h3>
         <p>Local storage: localstorage.get or .set("name","value") to have the browser save
             things. Client has control of the browser, never assume local storage exists. 
             Local storage is visible to users.
-            
+            <br/><br/>
             Session storage will last until the browser is closed.
+            <br/><br/>
+            When there is nothing inside a section, it will collapse and have no height.
+            <br/><br/>
+            Remember 'placeholder' tag
+            <br/><br/>
+            When interacting with localStorage the keywords 'getItem' and 'setItem' are used.
+            The thing to remember is the value name. When you ask for a value from local storage
+            you need to know it's value name. When setting a value to the local storage you set
+            it's name and the value associated with the name.
+            <br/><br/>
         </p>
-        <h2>Code Examples</h2>
+        <h3>Code Examples</h3>
         <code>
-
+            #result_display{
+                background-color: DarkGrey;
+                width: 300px;
+                height: 150px;
+            }
         </code>
-        <h3>Example?</h3>
+        <p>
+            The above code shows how to give dimensions to a section.<br/><br/>
+        </p>
+        <code>
+            function saveStory(){
+                let storyName = document.getElementById("name_input").value
+                let storyHTML = document.getElementById("story_editor").value
+                localstorage.setItem(storyName, storyHTML)
+            }
+        </code>
+        <p>The above code saves the entered in story under the name of storyName in the user's local
+            storage. 
+        </p>
     </main>
     <footer></footer>
 </body>
