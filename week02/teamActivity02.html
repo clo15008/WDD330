@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <input type="text" id ="secondInput">
+    <button id="submit">Summing</button>
+    <button id="add" onclick="performOperation(addSomthing)">+</button>
+    <button id="multiply" onclick="performOperation(multiplication)">*</button>
+    <button id="divide" onclick="performOperation(division)">/</button>
+    <div id="output"></div>
+    <div id="sum"></div>
+    <script>
+      
+      function getNum(numId) {
+        const number = document.getElementById(numId).value;
+        const numberFloat = parseFloat(number);
+        if (numberFloat !== NaN) {
+          return numberFloat;
+        } else return 0;
+      }
+
+
+    function multiplication(a, b) 
+    {
+    
+        return a * b;
+      
+    }
+
+    function division(a, b) 
+    {
+        
+      return a /b;
+
+    }
+
+    function addSomthing(a,b) 
+    {
+      return a + b;
+    }
+
+    
+      function performOperation(operation) 
+    {
+
+        
+        const total = operation(getNum('input'), getNum('secondInput'));
+        
+        if (!isNaN(total))
+        document.querySelector('#sum').innerHTML = total;
+        else
+        document.querySelector('#sum').innerHTML = "Please enter a digit.";
+
+    }
+
+
+    const doSomthing = () => 
+    {
+      a = parseInt(document.querySelector("#input").value);
+      if(!isNaN(a))
+      {
+        var sum = 0;
+        for(var j = 1; j <= a; j++)
+        {
+            sum += j;
+            console.log(j);
+        }
+        document.querySelector('#sum').innerHTML = sum;
+
+      }
+      else
+      document.querySelector('#sum').innerHTML = "Please enter a digit.";
+    }
+    
+    document.querySelector('#submit').addEventListener("click", doSomthing);
+    </script>
+</body>
+</html>
