@@ -10,20 +10,67 @@
     <main>
         <h3>Notes</h3>
         <p>
+            Helpful function for variables: 
+            <br>.length - returns the size of an array, array length can't be altered
+            <br>.includes('') - looks to see if an array includes a value
+            <br>.concat('') - concatenates two strings
 
-        </p>
-        <h3>Code Examples</h3>
-        <code>
-            
-        </code>
-        <p>
-            
+            <br><br>To print out a variable in the middle of string text use ${ varialbeName }
         </p>
         <code>
-            
+            const name = `Siri`;
+            `Hello ${ name }!`;
         </code>
         <p>
+            <br><br>Exponents are done as "2**3" this result comes to 8
 
+            <br><br>Arry destruction:
         </p>
+        <code>
+            const [x, y] = [1, 2];
+        </code>
+        <p>
+            <br><br>This sets the arrays 'x' and 'y' to the values '1' and '2' respectively
+
+            <br><br>Some useful functions for arrays are:
+            <br>.join() - joins the elements of an array into a string with elements seperated by ','
+            <br>.slice(#, #) - returns a sub array starting from one index up to (but not including) the next index
+            <br>.sort() - sorts alphabetically
+
+            <br><br>Formate for multidimensional arrays
+        </p>
+        <code>
+            const coordinates = [[1,3],[4,2]];
+        </code>
+        <p>
+            <br><br>For functions with that may have an unknown amount of arguments:
+        </p>
+        <code>
+            function name(...args) {
+                return args
+            }
+        </code>
+        <p>
+            <br><br>Function declare with the keyword 'function' are automatically hoisted, meaning
+            they are run before other code.
+
+            <br>Callbacks is when a function is used as a parameter to another function.
+        </p>
+        <code>
+            function sing(song) {
+                console.log(`I'm singing along to ${song}`);
+            }
+            sing('Let It Go')
+        </code>
+        <p>
+            <br><br>forEach value in an array
+        </p>
+        <code>
+            colors.forEach( (color,index) =>
+            console.log(`Color at position ${index}  is ${color}`) );
+<<          "Color at position 0 is Red"
+            "Color at position 1 is Green"
+            "Color at position 2 is Blue"
+        </code>
 </body>
 </html>
