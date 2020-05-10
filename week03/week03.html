@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Week 02</h2>
+    <main>
+        <h3>Notes</h3>
+        <p>
+            objects:
+        </p>
+        <code>
+            let person = {
+                /* property */
+                firstname: 'Tim',
+                lastname: 'Thayne'
+                /* method */
+                sayHello() {
+                    console.log('hello' + this.firstname + ' ' + this.lastname');
+                }
+            };
+
+            person.sayHello();
+        </code>
+        <p>
+            <br><br>javasccript file
+        </p>
+        <code>
+            export class Person {
+                constructor(firstname, lastname) {
+                    this.firstname = firstname,
+                    this.lastname = lastname
+                }
+            }
+        </code>
+        <p>
+            week3.js
+        </p>
+        <code>
+            import { Person } from './person.js';
+
+            let person1 = new Person('Garrett', 'Cloud');
+        </code>
+        <p>
+            <br><br>Remember, to use a class module you need to include that in the html script tag
+        </p>
+        <code>
+            <script src="scripts/week3.js" type="module"></script>
+        </code>
+        <p>
+            <br><br>Step through an array
+        </p>
+        <code>
+            students.forEach() {
+                student => {
+                    console.log(`${student.firstname} $}student.lastname}`);
+                }
+            }
+        </code>
+        <p>
+            <br><br>DOM - Document Object module <br>Getting elements:
+        </p>
+        <code>
+            const body = document.body;
+            typepf body;
+            body.nodeType;
+        </code>
+        <p>
+            <br><br>node codes:
+            <br>1 - element
+            <br>2 - attribute
+            <br>3 - text
+            <br>8 - comment
+            <br>9 - body
+        </p>
+        <p>
+            <br><br>Adding elements to a page
+            <br>.appendChild()
+            <br>.createElement('li', 'name');
+            <br>.insertBefore('newName', 'previousElement');
+            <br>.removeChild();
+            <br>.innerHTML = 'HTML code';
+            <br>.style. = '';
+        </p>
+        <code>
+            
+        </code>
+</body>
+</html>
