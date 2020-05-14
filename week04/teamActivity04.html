@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+  /* background-color: #2196F3; */
+  /* padding: 10px; */
+}
+
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* padding: 20px; */
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+      </div>
+      <br><br>
+    <button id="reset">Push to reset</button>
+</body>
+<script>
+    let player1 = 'X';
+    let player2 = 'O';
+    let player = player1;
+
+    function takeTurn(location) {
+        // alert("take turn" + location.target);
+        if(player === player1)
+        {
+            location.target.innerHTML = player1;
+            player = player2;
+        }
+        else if(player === player2)
+        {
+            location.target.innerHTML = player2;
+            player = player1;
+        }
+        
+    }
+    function reset() {
+        let children = document.querySelector('.grid-container').children;
+        for(let i = 0; i < children.length; i++)
+        {
+            children[i].innerHTML = "";
+        }
+    }
+
+    
+    document.querySelector('.grid-container').addEventListener('click', takeTurn);
+    document.querySelector('#reset').addEventListener('click', reset);
+</script>
+</html>
