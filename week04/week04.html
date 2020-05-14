@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Week 04</h2>
+    <main>
+        <h3>Notes</h3>
+        <p>
+            for attribute links to an ID
+
+            div tag is a great way to block elements
+
+        </p>
+        <code>
+            <form>
+                <div>
+                    <label for="firstName">First name: </label>
+                    <input type="text" id="firstName" name="firstName"> 
+                </div>
+                <div>
+                    <label for="lastName">lastName name: </label>
+                    <input type="text" id="lastName" name="lastName">   
+                </div>
+                <div>
+                    <label for="iNumber">I-Number: </label>
+                    <input type="text" id="iNumber" name="iNumber" placeholder="55-555-5555">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </code>
+        <p>
+            inline-block is spacing for block elements
+        </p>
+        <code>
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        </code>
+        <p>
+            using the number attribute will create a number prompt for phones
+        </p>
+        <code>
+            <input type="number">
+        </code>
+        <p>
+
+        </p>
+        <code>
+            document.querySelector('input[type="submit"]').addEventListener('click', saveForm);
+
+            function saveForm(addEventListener){
+                let firstName = document.getElementById("firstName").value;
+                let lastName = document.getElementById("lastName").value;
+
+                let student = {
+                    firstName: firstName,
+                    lastName: lastName
+                }
+
+                document.forms[0].reset();
+                event.preventDefault();
+            }
+        </code>
+        <p>
+            Student class
+            (best)
+
+            to import:
+            import { Student } from ./student.js';
+        </p>
+        <code>
+            export class Student{
+                constructor(firstName, lastName, iNumber){
+                    this.FirstName = firstName,
+                    this.LastName = lastName,
+                    this.INumber = iNumber
+                }
+            }
+        </code>
+        <p>
+            How to use browser local localStorage
+            before storing an object you need to serialize it into a string
+        </p>
+        <code>
+            let students = [];
+            if(localStorage.getItem('students'){
+                students = JSON.parse(localStorage.getItem('students'));
+            }
+            students.push(student);
+            localStorage.setItem('students', JSON.(stringify(students)));
+        </code>
+        <p>
+
+        </p>
+        <code>
+            students.forEach(
+                student => {
+                    document.querySelecotr('tbody').innerHTML =
+                        `<tr>
+                            <td>${student.firstName}</td>
+                            <td>${student.lastName}</td>
+                            <td>${student.iNumber}</td>
+                        </tr>`
+                    )
+                }
+            )
+        </code>
+</body>
+</html>
