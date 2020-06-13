@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .test {
+                color: #484848;
+                transform: rotate(10deg) translateX(40px) scale(1.5);
+                margin-left: 50px;
+            }
+    .test2 {
+        transform: skew(15deg, 4deg);
+        margin-left: 50px;
+    }
+</style>
+<body>
+    <h2>Week 08</h2>
+    <main>
+        <h3>Notes</h3>
+        <br><br>
+        <p class="test">
+            example text
+        </p>
+        <code>
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+        </code>
+        <br><br><br>
+        <p class="test2">
+            example text
+        </p>
+        <code>
+            transform: skew(15deg, 4deg);
+        </code>
+        <br><br><br>
+        <p>
+            Canvas test:
+        </p>
+        <canvas>
+            This browser doesn't support canvas
+        </canvas>
+        <br>
+        <p>
+            The following code will draw a filled in square in canvas
+        </p>
+        <code>
+            var canvas = document.getElementById("myCanvas"); 
+            var context = canvas.getContext("2d"); 
+            context.strokeStyle = "red";
+            context.fillStyle = "rgba(0, 0, 255, 0.5)";
+            context.fillRect(10, 10, 100, 100);   
+            context.strokeRect(10, 10, 100, 100);
+        </code>
+        <br>
+        <p>
+            Canvas can be used to draw shapes and edit pictures
+        </p>
+</body>
+</html>
