@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        main {
+            padding: 1rem;
+        }
+        .main-header {
+            width: 100%;
+            height: 56px;
+            background-color: red;
+            padding: 0 1.5rem;
+        }
+        .main-header_nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .main-header_item-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+        }
+        .main-header_item{
+            list-style: none;
+            margin: 0 1rem;
+            padding: 0;
+        }
+        .main-header_item a {
+            text-decoration: none;
+            color: white;
+        }
+        .main-header_item a:hover,
+        .main-header_item a:active,
+        .main-header_item a:active {
+            color: blue;
+        }
+        .info {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header_nav">
+            <ul class="main-header_item-list">
+                <li class="main-header_item"><a href="./main.html">Home</a></li>
+                <li class="main-header_item"><a href="./quiz.html">Quizzes</a></li>
+                <li class="main-header_item"><a href="./results.html">Results</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p class="info">
+        Welcome to Country Quiz. 
+        <br><br>The purpose of this application is to both test and grow your knowledge relating to country capitals.
+        <br><br>To begin please select the 'Quiz' menu option.
+        <br><br>To review quizzes your last quiz, select the 'Results' menu option.
+        <br><br>Enjoy!
+    </p>
+    
+</body>
+</html>

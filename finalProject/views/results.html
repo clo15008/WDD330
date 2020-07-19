@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        main {
+            padding: 1rem;
+        }
+        .main-header {
+            width: 100%;
+            height: 56px;
+            background-color: red;
+            padding: 0 1.5rem;
+        }
+        .main-header_nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .main-header_item-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+        }
+        .main-header_item{
+            list-style: none;
+            margin: 0 1rem;
+            padding: 0;
+        }
+        .main-header_item a {
+            text-decoration: none;
+            color: white;
+        }
+        .main-header_item a:hover,
+        .main-header_item a:active,
+        .main-header_item a:active {
+            color: blue;
+        }
+        h2 {
+            text-align: center;
+        }
+        .items {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body onload="results()">
+    <header class="main-header">
+        <nav class="main-header_nav">
+            <ul class="main-header_item-list">
+                <li class="main-header_item"><a href="./main.html">Home</a></li>
+                <li class="main-header_item"><a href="./quiz.html">Quizzes</a></li>
+                <li class="main-header_item"><a href="./results.html">Results</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2><u>Quiz Results</u></h2><br><br>
+    <div id="results" class="items"></div>
+    <br><br>
+    <div id="data" class="items"></div>
+</body>
+<script src="../scripts/results.js"></script>
+</html>
